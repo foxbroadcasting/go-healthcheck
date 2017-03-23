@@ -299,8 +299,3 @@ func statusResponse(w http.ResponseWriter, r *http.Request, status int, checks m
 	}
 }
 
-// Registers global /debug/health api endpoint, creates default registry
-func init() {
-	DefaultRegistry = NewRegistry()
-	http.HandleFunc("/debug/health", StatusHandler)
-}
